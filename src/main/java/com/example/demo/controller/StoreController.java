@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Set;
 
-@RequestMapping("/store/order")
+@RequestMapping("/order")
 @RestController
 public class StoreController {
     private final CartService cartService;
@@ -23,7 +23,7 @@ public class StoreController {
     }
 
     @GetMapping(path = "/get")
-    public Object getProduct(){
+    public Set<Integer> getProduct(){
         return cartService.getProduct();
     }
 }
